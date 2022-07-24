@@ -1,0 +1,15 @@
+.ipynb_checkpoints
+.cache
+.config
+.ipython
+.jupyter
+.local
+.tox
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+.Rproj.user

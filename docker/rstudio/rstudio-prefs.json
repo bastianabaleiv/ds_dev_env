@@ -1,0 +1,13 @@
+{
+    "always_save_history": false,
+    "font_size_points": 11,
+    "editor_theme": "Night Owl {rsthemes}",
+    "posix_terminal_shell": "bash",
+    "save_workspace": "never" ,
+    "server_editor_font": "Fira Code",
+    "highlight_r_function_calls": true,
+    "highlight_selected_line": true,
+    "rainbow_parentheses": true,
+    "server_editor_font_enabled": true,
+    "wrap_tab_navigation": false
+}

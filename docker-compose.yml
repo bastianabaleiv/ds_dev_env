@@ -1,0 +1,32 @@
+version: "3"
+services:
+    jupyter:
+      container_name: jupyter
+      image: jupyter/datascience-notebook:807999a41207
+      restart: always
+      user: root
+      environment:
+        - GRANT_SUDO=yes
+        - NB_UID=1000
+        - RESTARTABLE=yes
+      ports:
+        - 8888:8888
+      working_dir: /home/jovyan/ds_dev_env
+      volumes:
+        - .:/home/jovyan/ds_dev_env
+    rstudio:
+      container_name: rstudio
+      image: rstudio-dev
+      restart: always
+      environment:
+        - USER=rstudio
+        - PASSWORD=password
+        - USERID=1000
+      build:
+        context: ./docker/rstudio
+        dockerfile: Dockerfile
+      ports:
+        - 8080:8787
+      working_dir: /home/rstudio/ds_dev_env
+      volumes:
+        - .:/home/rstudio/ds_dev_env
